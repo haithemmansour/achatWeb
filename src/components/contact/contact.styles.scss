@@ -1,0 +1,60 @@
+.contact-form {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    
+
+    .proposition{
+      width: 200px;
+      position: relative;
+      margin: 16px 0px 31px calc((100% - 980px) * 0.5);
+      left: 12px;
+      justify-self: start;
+      align-self: start;
+    }
+    .contact-input-form{
+      position: relative;
+    }
+  
+   
+  
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 20px 0;
+      
+    }
+    .title{
+      margin: 15px 0;
+      line-height: 1.4em;
+      text-align: center;
+      font-size: 50px;
+      align-content: center;
+    }
+  
+   
+  
+      .message{
+      
+      padding: 10px 10px 200px 5px;
+       
+      word-wrap: break-word;
+      word-break: break-all;
+      background: none;
+      background-color: white;
+      color: gray;
+      font-size: 18px;
+      display: block;
+      width: 100%;
+      border: 1px solid gray;
+      border-radius: 0;
+      margin: 25px 0;
+      resize: none;
+      &:focus {
+        outline: none;
+      }
+      
+    }
+  }
+  

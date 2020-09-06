@@ -1,100 +1,91 @@
-import React from 'react';
+import React, { useState } from 'react'
+import { Axios, firestore } from '../../firebase/firebase.utils';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import { auth } from '../../firebase/firebase.utils';
+import './contact.styles.scss'
 
-import './contact.styles.scss';
+const Contact = () => {
+  const [formData, setFormData] = useState({})
 
-class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      displayName:'',  
+  const updateInput = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+  const handleSubmit = event => {
+    event.preventDefault()
+    sendEmail()
+    setFormData({
+      name: '',
       email: '',
-      phone: '',
-      message : ''
-    };
+      message: '',
+    })
+  }
+  const sendEmail = () => {
+    Axios.post(
+      'https://us-central1-achat-web.cloudfunctions.net/submit',
+      formData
+    )
+      .then(res => {
+        firestore.collection('emails').add({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: new Date(),
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
-
-  handleSubmit = async event => {
-    event.preventDefault();
-
-    const { displayName , email } = this.state;
-
-    try {
-      await auth.sendEmailVerification( displayName, email );
-      this.setState({ displayName: '', email: '' });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  handleChange = event => {
-    const { value, name } = event.target;
-
-    this.setState({ [name]: value });
-  };
-  render() {
-    const { displayName, email, phone, message } = this.state;
-    return (
-      <div className='contact-form'>
+  return (
+    <div >
         <div className='title'>
           <span>CONTACT</span>
         </div>
+        <div className='contact-form'>
         <div className ='proposition'>
             <span>Si vous ne trouvez as votre bonheur ou vous avez une propsition, contactez-nous !</span>
         </div>
-        
-        <form onSubmit={this.handleSubmit}>
-          <div>
-          <FormInput
-          type='text'
-          name='displayName'
-          value={displayName}
-          onChange={this.handleChange}
-          label='Prénom'
-          required
-          />
-          <FormInput
-          type='email'
-          name='email'
-          value={email}
-          onChange={this.handleChange}
-          label='E-mail'
-          required
-          />
-          <FormInput
-            name='phone'
-            type='tel'
-            value={phone}
-            handleChange={this.handleChange}
-            label='Téléphone'
-            required
-          />
-          
-            <textarea
-              className='message'
-              name='message'
-              value={message}
-              handleChange={this.handleChange}
-              onChange={this.handleChange}
-              required
-              placeholder="Rédigez votre message ici ..."
-              />
-         </div> 
+      <form onSubmit={handleSubmit}>
+      <div className="contact-input-form">
+        <FormInput
+          type="text"
+          name="name"
+          label="Prénom"
+          onChange={updateInput}
+          value={formData.name || ''}
+        />
 
-              
-          <div className='buttons'>
-            <CustomButton type='submit'> Envoyer </CustomButton>
-          </div>
-        </form>
-      </div>
-    );
-  }
+        <FormInput
+          type="email"
+          name="email"
+          label="E-mail"
+          onChange={updateInput}
+          value={formData.email || ''}
+        />
+
+        <textarea
+          type="text"
+          name="message"
+          placeholder="Rédigez votre message ici ..."
+          onChange={updateInput}
+          value={formData.message || ''}
+        />
+
+        
+        <CustomButton type='submit'> Envoyer </CustomButton>
+        </div>
+        
+      </form>
+    </div>
+    </div> 
+    
+  )
 }
 
-export default Contact;
+export default Contact

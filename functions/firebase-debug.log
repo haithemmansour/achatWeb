@@ -1,0 +1,51 @@
+[debug] [2020-09-02T12:54:17.273Z] ----------------------------------------------------------------------
+[debug] [2020-09-02T12:54:17.277Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Haithem\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2020-09-02T12:54:17.277Z] CLI Version:   8.9.2
+[debug] [2020-09-02T12:54:17.277Z] Platform:      win32
+[debug] [2020-09-02T12:54:17.277Z] Node Version:  v12.18.3
+[debug] [2020-09-02T12:54:17.284Z] Time:          Wed Sep 02 2020 13:54:17 GMT+0100 (West Africa Standard Time)
+[debug] [2020-09-02T12:54:17.285Z] ----------------------------------------------------------------------
+[debug] [2020-09-02T12:54:17.285Z] 
+[debug] [2020-09-02T12:54:17.303Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-02T12:54:17.304Z] > authorizing via signed-in user
+[debug] [2020-09-02T12:54:17.304Z] [iam] checking project achat-web for permissions ["firebase.projects.get"]
+[debug] [2020-09-02T12:54:17.310Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/achat-web:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-09-02T12:54:18.313Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 02 Sep 2020 12:54:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=626","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "8" doesn't match your global version "12" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"8\" doesn't match your global version \"12\""}}
+[debug] [2020-09-02T12:54:20.539Z] defaultcredentials: writing to file C:\Users\Haithem\AppData\Roaming\firebase\haithemmansour_contact_gmail.com_application_default_credentials.json
+[debug] [2020-09-02T12:54:20.541Z] DEBUG: Setting GAC to C:\Users\Haithem\AppData\Roaming\firebase\haithemmansour_contact_gmail.com_application_default_credentials.json
+[debug] [2020-09-02T12:54:20.560Z] [functions] Watching "C:\reactApp\achat-web\functions" for Cloud Functions...
+[debug] [2020-09-02T12:54:20.593Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-09-02T12:54:20.593Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-09-02T12:54:20.594Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-09-02T12:54:20.594Z] DEBUG: [worker-~diagnostic~-45275839-01bf-41c5-aef6-8159bd16fc48]: Assigning socketPath: \\?\pipe\C:\reactApp\achat-web\functions\16640
+[debug] [2020-09-02T12:54:20.595Z] DEBUG: [worker-~diagnostic~-45275839-01bf-41c5-aef6-8159bd16fc48]: BUSY
+[debug] [2020-09-02T12:54:21.664Z] DEBUG: [runtime-status] [16640] Functions runtime initialized. {"cwd":"C:\\reactApp\\achat-web\\functions","node_version":"12.18.3"}
+[debug] [2020-09-02T12:54:21.667Z] DEBUG: [runtime-status] [16640] Disabled runtime features: undefined
+[debug] [2020-09-02T12:54:21.684Z] DEBUG: [runtime-status] [16640] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-02T12:54:21.690Z] DEBUG: [runtime-status] [16640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-02T12:54:21.693Z] DEBUG: [runtime-status] [16640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-02T12:54:21.697Z] DEBUG: [runtime-status] [16640] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-09-02T12:54:21.699Z] DEBUG: [runtime-status] [16640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-02T12:54:21.838Z] DEBUG: [runtime-status] [16640] Checked functions.config() {"config":{}}
+[debug] [2020-09-02T12:54:21.839Z] DEBUG: [runtime-status] [16640] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-09-02T12:54:21.840Z] DEBUG: [runtime-status] [16640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-02T12:54:21.843Z] DEBUG: [runtime-status] [16640] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-09-02T12:54:21.844Z] DEBUG: [runtime-status] [16640] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-09-02T12:54:21.845Z] DEBUG: [runtime-status] [16640] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\reactApp\\achat-web\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[warn] !  It looks like you're trying to access functions.config().gmail but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator {"metadata":{"emulator":{"name":"functions"},"message":"It looks like you're trying to access functions.config().gmail but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator"}}
+[warn] !  TypeError: Cannot read property 'email' of undefined
+    at Object.<anonymous> (C:\reactApp\achat-web\functions\index.js:6:44)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at C:\Users\Haithem\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:681:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Haithem\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:5:58) {"metadata":{"emulator":{"name":"functions"},"message":"TypeError: Cannot read property 'email' of undefined\n    at Object.<anonymous> (C:\\reactApp\\achat-web\\functions\\index.js:6:44)\n    at Module._compile (internal/modules/cjs/loader.js:1137:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)\n    at Module.load (internal/modules/cjs/loader.js:985:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:878:14)\n    at Module.require (internal/modules/cjs/loader.js:1025:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at C:\\Users\\Haithem\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:681:33\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\Haithem\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:5:58)"}}
+[warn] !  We were unable to load your functions code. (see above) {"metadata":{"emulator":{"name":"functions"}}}
+[debug] [2020-09-02T12:54:22.023Z] DEBUG: [worker-~diagnostic~-45275839-01bf-41c5-aef6-8159bd16fc48]: exited
+[debug] [2020-09-02T12:54:22.023Z] DEBUG: [worker-~diagnostic~-45275839-01bf-41c5-aef6-8159bd16fc48]: FINISHED

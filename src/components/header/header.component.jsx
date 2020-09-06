@@ -9,7 +9,8 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
-import { ReactComponent as Logo } from '../../assets/crown.svg';
+import { ReactComponent as Logo } from '../../assets/clothes.svg';
+import { ImHome, ImCart, ImPhone, ImEnter,ImExit } from "react-icons/im";
 
 import './header.styles.scss';
 
@@ -17,23 +18,36 @@ const Header = ({ currentUser, hidden }) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
+      ACHAT WEB
     </Link> 
     <div className='options'>
       <Link className='option' to='/'>
+        <ImHome className='icons' />
+        <br/>
         HOME
       </Link>
       <Link className='option' to='/shop'>
+        <ImCart className='icons'/>
+        <br/>
         SHOP
       </Link>
       <Link className='option' to='/contact'>
+        <ImPhone className='icons' />
+        <br/>
         CONTACT
       </Link>
       {currentUser ? (
         <div className='option' onClick={() => auth.signOut()}>
-          SIGN OUT
+        <Link to='/signin'>
+            <ImExit className='icons' />
+            <br/>
+            SIGN OUT
+        </Link>
         </div>
       ) : (
         <Link className='option' to='/signin'>
+          <ImEnter className='icons' />
+          <br/>
           SIGN IN
         </Link>
       )}

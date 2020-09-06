@@ -3,13 +3,14 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 
 
   .logo-container {
     height: 50%;
-    width: 50px;
+    width: 120px;
     padding: 25px;
+    text-align: center;
   }
 
   .options {
@@ -21,8 +22,12 @@
     
 
     .option {
+      
       padding: 10px 15px;
       cursor: pointer;
+      text-align: center;
+      
     }
+   
   }
 }

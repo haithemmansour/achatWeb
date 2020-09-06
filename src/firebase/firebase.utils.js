@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import 'firebase/database';
+import Axios from 'axios';
 
 const config = {
   apiKey: "AIzaSyAcTW7KvaEZUvCBYs3ha77xB1jLrCk12K8",
@@ -80,4 +82,5 @@ const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
+export { Axios };
 export default firebase;

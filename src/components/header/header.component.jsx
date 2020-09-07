@@ -24,12 +24,12 @@ const Header = ({ currentUser, hidden }) => (
       <Link className='option' to='/'>
         <ImHome className='icons' />
         <br/>
-        HOME
+        BOUTIQUE
       </Link>
       <Link className='option' to='/shop'>
         <ImCart className='icons'/>
         <br/>
-        SHOP
+        ACHAT
       </Link>
       <Link className='option' to='/contact'>
         <ImPhone className='icons' />
@@ -41,14 +41,14 @@ const Header = ({ currentUser, hidden }) => (
         <Link to='/signin'>
             <ImExit className='icons' />
             <br/>
-            SIGN OUT
+            DECONNECTION
         </Link>
         </div>
       ) : (
         <Link className='option' to='/signin'>
           <ImEnter className='icons' />
           <br/>
-          SIGN IN
+          CONNECTION
         </Link>
       )}
       <CartIcon />

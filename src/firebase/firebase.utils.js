@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/database';
+
 import Axios from 'axios';
 
 const config = {
@@ -76,11 +76,11 @@ export const convertCollectionsSnapshotToMap = collections => {
 };
 
 export const auth = firebase.auth();
-export const firestore = firebase.firestore();
+const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
-export { Axios };
+export { Axios,firestore };
 export default firebase;

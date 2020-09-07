@@ -30,7 +30,7 @@ const Contact = () => {
       formData
     )
       .then(res => {
-        firestore.collection('emails').add({
+        firestore.collection('users').add({
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -43,49 +43,48 @@ const Contact = () => {
   }
 
   return (
+    
     <div >
-        <div className='title'>
-          <span>CONTACT</span>
-        </div>
-        <div className='contact-form'>
+      <div className='title'>
+        <span>CONTACT</span>
+      </div>
+      <div className='contact-form'>
         <div className ='proposition'>
-            <span>Si vous ne trouvez as votre bonheur ou vous avez une propsition, contactez-nous !</span>
+            <span>Si vous ne trouvez pas votre bonheur ou vous avez une propsition, contactez-nous !</span>
         </div>
-      <form onSubmit={handleSubmit}>
-      <div className="contact-input-form">
-        <FormInput
-          type="text"
-          name="name"
-          label="Prénom"
-          onChange={updateInput}
-          value={formData.name || ''}
-        />
+        <form onSubmit={handleSubmit}>
+          <div className="contact-input-form">
+            <FormInput
+              type="text"
+              name="name"
+              label="Prénom"
+              onChange={updateInput}
+              value={formData.name || ''}
+            />
 
-        <FormInput
-          type="email"
-          name="email"
-          label="E-mail"
-          onChange={updateInput}
-          value={formData.email || ''}
-        />
+            <FormInput
+              type="email"
+              name="email"
+              label="E-mail"
+              onChange={updateInput}
+              value={formData.email || ''}
+            />
 
-        <textarea
-          type="text"
-          name="message"
-          placeholder="Rédigez votre message ici ..."
-          onChange={updateInput}
-          value={formData.message || ''}
-        />
+            <textarea
+              type="text"
+              name="message"
+              placeholder="Rédigez votre message ici ..."
+              onChange={updateInput}
+              value={formData.message || ''}
+            />
 
-        
-        <CustomButton type='submit'> Envoyer </CustomButton>
-        </div>
-        
-      </form>
-    </div>
+            <CustomButton type='submit'> Envoyer </CustomButton>
+          </div> 
+        </form>
+      </div>
     </div> 
     
   )
 }
 
-export default Contact
+export default Contact;

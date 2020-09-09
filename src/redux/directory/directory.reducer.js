@@ -1,36 +1,52 @@
 const INITIAL_STATE = {
   sections: [
     {
-      title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      title: 'Montres',
+      imageUrl: "https://i.ibb.co/54YR2HN/montre.jpg"  ,
       id: 1,
-      linkUrl: 'shop/hats'
+      linkUrl: 'shop/montres'
+
     },
     {
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      title: 'costume',
+      imageUrl: "https://i.ibb.co/9c23WLz/costume.jpg"   ,
       id: 2,
-      linkUrl: 'shop/jackets'
+      linkUrl: 'shop/costume'
+
     },
     {
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      title: 'Vestes',
+      imageUrl: "https://i.ibb.co/546rJjw/veste.jpg",
       id: 3,
-      linkUrl: 'shop/sneakers'
+      linkUrl: 'shop/vestes'
     },
     {
-      title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      title: 'Chaussures',
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
       size: 'large',
       id: 4,
-      linkUrl: 'shop/womens'
+      linkUrl: 'shop/chaussures'
     },
     {
-      title: 'mens',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      title: 'Femmes',
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
       size: 'large',
       id: 5,
-      linkUrl: 'shop/mens'
+      linkUrl: 'shop/femmes'
+    },
+    {
+      title: 'Hommes',
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      size: 'large',
+      id: 6,
+      linkUrl: 'shop/hommes'
+    },
+    {
+      title: 'Chapeaux',
+      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      size: 'large',
+      id: 7,
+      linkUrl: 'shop/chapeaux'
     }
   ]
 };

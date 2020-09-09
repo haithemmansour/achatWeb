@@ -30,7 +30,7 @@ const Contact = () => {
       formData
     )
       .then(res => {
-        firestore.collection('users').add({
+        firestore.collection("emails").add({
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -76,7 +76,7 @@ const Contact = () => {
               placeholder="Rédigez votre message ici ..."
               onChange={updateInput}
               value={formData.message || ''}
-            />
+              ></textarea>
 
             <CustomButton type='submit'> Envoyer </CustomButton>
           </div> 

@@ -30,7 +30,7 @@ const Contact = () => {
       formData
     )
       .then(res => {
-        firestore.collection("emails").add({
+        firestore.collection('emails').add({
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -52,7 +52,7 @@ const Contact = () => {
         <div className ='proposition'>
             <span>Si vous ne trouvez pas votre bonheur ou vous avez une propsition, contactez-nous !</span>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="POST" >
           <div className="contact-input-form">
             <FormInput
               type="text"

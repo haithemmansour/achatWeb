@@ -8,7 +8,7 @@ const INITIAL_STATE = {
 
     },
     {
-      title: 'costume',
+      title: 'Costume',
       imageUrl: "https://i.ibb.co/9c23WLz/costume.jpg"   ,
       id: 2,
       linkUrl: 'shop/costume'
@@ -22,28 +22,28 @@ const INITIAL_STATE = {
     },
     {
       title: 'Chaussures',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      imageUrl: 'https://i.ibb.co/fNKffv3/shoes.png',
       size: 'large',
       id: 4,
       linkUrl: 'shop/chaussures'
     },
     {
       title: 'Femmes',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      imageUrl: 'https://i.ibb.co/frfMhk0/women.jpg',
       size: 'large',
       id: 5,
       linkUrl: 'shop/femmes'
     },
     {
       title: 'Hommes',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      imageUrl: 'https://i.ibb.co/qYXyzL3/mens.jpg',
       size: 'large',
       id: 6,
       linkUrl: 'shop/hommes'
     },
     {
       title: 'Chapeaux',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      imageUrl: 'https://i.ibb.co/1n1WnJT/caps.jpg',
       size: 'large',
       id: 7,
       linkUrl: 'shop/chapeaux'

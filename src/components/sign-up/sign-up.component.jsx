@@ -24,13 +24,14 @@ class SignUp extends React.Component {
     event.preventDefault();
     const { signUpStart } = this.props;
     const { displayName, email, password, confirmPassword } = this.state;
-
+    
     if (password !== confirmPassword) {
       alert("passwords don't match");
       return;
     }
-
-    signUpStart({ displayName, email, password });
+    
+    signUpStart({ displayName, email, password })
+    
   };
 
   handleChange = event => {

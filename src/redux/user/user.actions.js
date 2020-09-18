@@ -12,7 +12,7 @@ export const signInSuccess = user => ({
 
 export const signInFailure = error => ({
   type: UserActionTypes.SIGN_IN_FAILURE,
-  payload: error
+  payload: alert(error)
 });
 
 export const emailSignInStart = emailAndPassword => ({
@@ -49,5 +49,5 @@ export const signUpSuccess = ({ user, additionalData }) => ({
 
 export const signUpFailure = error => ({
   type: UserActionTypes.SIGN_UP_FAILURE,
-  payload: error
+  payload: alert(error)
 });

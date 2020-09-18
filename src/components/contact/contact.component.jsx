@@ -36,6 +36,7 @@ const Contact = () => {
           message: formData.message,
           time: new Date(),
         })
+        .then(()=>{ alert('votre message est envoyé avec succés')})
       })
       .catch(error => {
         console.log(error)
